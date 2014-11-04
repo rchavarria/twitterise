@@ -21,10 +21,22 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry (0.10.1-x64-mingw32)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+      win32console (~> 1.3)
+    pry (0.10.1-x86-mingw32)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+      win32console (~> 1.3)
     sequel (4.15.0)
     simple_oauth (0.2.0)
     slop (3.6.0)
     sqlite3 (1.3.9)
+    sqlite3 (1.3.9-x64-mingw32)
+    sqlite3 (1.3.9-x86-mingw32)
     thread_safe (0.3.4)
     twitter (5.11.0)
       addressable (~> 2.3)
@@ -37,9 +49,13 @@ GEM
       memoizable (~> 0.4.0)
       naught (~> 1.0)
       simple_oauth (~> 0.2.0)
+    win32console (1.3.2)
+    win32console (1.3.2-x86-mingw32)
 
 PLATFORMS
   ruby
+  x64-mingw32
+  x86-mingw32
 
 DEPENDENCIES
   dotenv
