@@ -36,6 +36,10 @@ TWITTER_ACCESS_TOKEN="YOUR_ACCESS_TOKEN"
 TWITTER_ACCESS_SECRET="YOUR_ACCESS_SECRET"
 ```
 
+### The twitter app must have write permissions
+
+Do not forget to grant write permissions to your twitter app.
+
 ## Configure Twitterise params
 
 You can configure how many twitter users you want to follow at a time, and how many
