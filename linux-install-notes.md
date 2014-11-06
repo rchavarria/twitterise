@@ -41,6 +41,41 @@ TWITTER_ACCESS_SECRET="YOUR_ACCESS_SECRET"
 Do not forget to grant write permissions to your twitter app. If you generated 
 tokens and secrets before, you need to regenerate them.
 
+If you do not have read-write permissions you get this error message:
+
+```
+/home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/rest/response/raise_error.rb:17:in `on_complete': Read-only application cannot POST. (Twitter::Error::Unauthorized)
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/faraday-0.9.0/lib/faraday/response.rb:9:in `block in call'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/faraday-0.9.0/lib/faraday/response.rb:57:in `on_complete'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/faraday-0.9.0/lib/faraday/response.rb:8:in `call'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/faraday-0.9.0/lib/faraday/request/url_encoded.rb:15:in `call'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/faraday-0.9.0/lib/faraday/request/multipart.rb:14:in `call'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/rest/request/multipart_with_file.rb:17:in `call'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/faraday-0.9.0/lib/faraday/rack_builder.rb:139:in `build_response'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/faraday-0.9.0/lib/faraday/connection.rb:377:in `run_request'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/faraday-0.9.0/lib/faraday/connection.rb:177:in `post'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/rest/client.rb:108:in `request'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/rest/client.rb:85:in `post'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/request.rb:22:in `perform'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/request.rb:29:in `perform_with_object'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/rest/utils.rb:39:in `perform_with_object'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/rest/friends_and_followers.rb:135:in `block in follow!'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/utils.rb:41:in `block in pmap'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/utils.rb:41:in `collect'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/utils.rb:41:in `pmap'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/rest/friends_and_followers.rb:134:in `follow!'
+	from /home/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/twitter-5.11.0/lib/twitter/rest/friends_and_followers.rb:114:in `follow'
+	from /home/user/repositories/twitterise/lib/twitter_client.rb:36:in `block in follow'
+	from /home/user/repositories/twitterise/lib/twitter_client.rb:52:in `call'
+	from /home/user/repositories/twitterise/lib/twitter_client.rb:52:in `twitter_request'
+	from /home/user/repositories/twitterise/lib/twitter_client.rb:34:in `follow'
+	from /home/user/repositories/twitterise/lib/twitterise.rb:32:in `block in follow_new_users'
+	from /home/user/repositories/twitterise/lib/twitterise.rb:31:in `each'
+	from /home/user/repositories/twitterise/lib/twitterise.rb:31:in `follow_new_users'
+	from /home/user/repositories/twitterise/lib/twitterise.rb:17:in `call'
+	from bin/twitterise:7:in `<main>'
+```
+
 ## Configure Twitterise params
 
 You can configure how many twitter users you want to follow at a time, and how many
