@@ -38,7 +38,8 @@ TWITTER_ACCESS_SECRET="YOUR_ACCESS_SECRET"
 
 ### The twitter app must have write permissions
 
-Do not forget to grant write permissions to your twitter app.
+Do not forget to grant write permissions to your twitter app. If you generated 
+tokens and secrets before, you need to regenerate them.
 
 ## Configure Twitterise params
 
