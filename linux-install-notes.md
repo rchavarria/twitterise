@@ -36,3 +36,19 @@ TWITTER_ACCESS_TOKEN="YOUR_ACCESS_TOKEN"
 TWITTER_ACCESS_SECRET="YOUR_ACCESS_SECRET"
 ```
 
+## Configure Twitterise params
+
+You can configure how many twitter users you want to follow at a time, and how many
+days will take to unfollow them. You have just to modify `lib/twitterise.rb` file.
+These are the default values:
+
+```
+def number_to_follow
+  5
+end
+
+def after_days
+  5
+end
+```
+
