@@ -35,7 +35,7 @@ class Twitterise
   end
 
   def number_to_follow
-    5
+    1
   end
 
   def after_days
